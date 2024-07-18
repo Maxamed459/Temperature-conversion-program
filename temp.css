@@ -1,0 +1,50 @@
+body{
+    font-family: 'poppins';
+    background-color: #fff;
+}
+h1{
+    color: navy; 
+}
+form{
+    background-color: blanchedalmond;
+    text-align: center;
+    max-width: 350px;
+    margin: 90px auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
+}
+form:hover{
+    transform: scale(103%);
+    transition: 0.5s;
+}
+#textbox{
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+label{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+button{
+    margin-top: 15px;
+    background-color: navy;
+    color: #fff;
+    font-size: 1.5em;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(2, 2, 86);
+}
+#result{
+    font-size: 1.75em;
+    font-weight: bold;
+}

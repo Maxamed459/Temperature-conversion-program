@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="temp.css">
+</head>
+<body>
+    <form>
+        <h1>Temperature Conversion:</h1>
+        <input type="number" id="textbox" value="0"><br>
+         
+        <input type="radio" id="toFahrenheit" name="unit">
+        <label for="toFahrenheit">Celsius ➡️ Fehrenheit </label><br>
+
+        <input type="radio" id="toCelsius" name="unit">
+        <label for="toCelsius">Fehrenheit ➡️ Celsius </label><br>
+        <button type="button" onclick="convert()">submit</button>
+        <p id="result"></p>
+    </form>
+
+    <script>
+        const textbox = document.getElementById("textbox");
+        const toFahrenheit = document.getElementById("toFahrenheit");
+        const toCelsius = document.getElementById("toCelsius");
+        const result = document.getElementById("result");
+        let temp;
+        function convert(){
+            if (toFahrenheit.checked){
+                temp = Number(textbox.value);
+                temp = temp * 9 / 5 + 32;
+                result.textContent = temp.toFixed(1) + "°F"
+            }
+            else if(toCelsius.checked){
+                temp = Number(textbox.value);
+                temp = (temp - 32) * (5 / 9);
+                result.textContent = temp.toFixed(1) + "°C"
+            }
+            else{
+                result.textContent = "Select a unit"
+            }
+        }
+    </script>
+</body>
+</html>
